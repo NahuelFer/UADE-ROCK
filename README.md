@@ -1,15 +1,7 @@
---[ Proyecto Pagina Web UADE ]--
+¡Bienvenidos a nuestro proyecto de página web "UADE ROCK"!
 
---[
-
-Paleta de colores: Rojo, negro y blanco.
-
-Tema: Negocio, Tienda de instrumentos.
-
-Objetivos: A desarrollar...
-
-Colores:
-- Azul prusia: RGB: 0, 48, 73
-- Beige: RGB: 253, 240, 213
-- Rojo ladrillo: RGB: 193, 18, 31
-]--
+Integrantes:
+- Fernández, Nahuel Román.
+- Jorge, Sebastián.
+- Diaz Azuni, Hector Ignacio.
+- Salas, Martín.
