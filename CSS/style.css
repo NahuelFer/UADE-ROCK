@@ -1,0 +1,241 @@
+@font-face {
+    font-family: 'podium';
+    src: url('../resources/SFPRODISPLAYMEDIUM.OTF') format('truetype');
+}
+body {
+    background-color: #fffff0;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    color: #fffff0;
+    font-family: podium;
+    
+}
+
+h1 {
+    color: #fffff0;
+}
+
+#header {
+    background-color: #fffff0;
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+
+
+#titulo {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #fffff0;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#titulo img {
+    width: 10%;  
+    position: absolute;
+    left: 0; 
+}
+
+#inputBuscar {
+    width: 300px;
+    height: 40px;
+    background: #421a1a ;
+    border: none;
+    font-size: 14px;
+    color: #fffff0;
+    padding-left: 45px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+
+
+
+nav { 
+    background-color: #421a1a;
+    padding: 10px;
+}
+
+#navContainer {
+    position: relative; 
+    width: 100%;
+}
+
+#navId {
+    text-align: center; 
+}
+
+.nav1 {
+    padding-right: 20px;
+    color: #fff; 
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+.nav1:hover {
+    color: #c0341eb1;
+}
+
+.nav-icons {
+    position: absolute; 
+    right: 12px;
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
+.nav-icon {
+    color: #fff; 
+    margin-left: 20px; 
+    text-decoration: none; 
+}
+
+.nav-icon i {
+    font-size: 20px;
+}
+
+
+.nav-icon:hover {
+    color: #c0341eb1; /
+}
+
+.btn {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buscar {
+    background-color: #571e1e;
+}
+
+.buscar:hover {
+    background: #550c18;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 0.18em;
+}
+
+
+#image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+img{
+    height: auto;
+    width: 100%;
+    display: block;
+    
+}
+
+
+
+#image img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+#parrafo1 {
+    font-size: larger;
+    padding: 20px;
+    color: #fffff0;
+    max-width: 80ch;
+    background-color: #421a1a;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 15px;
+    border-color: #7e1627;
+}
+
+hr {
+    background-color: #550c18;
+    border: 1.5px solid #550c18;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #000000;
+    margin: 20px;
+}	
+footer a:hover {
+    color: #ff0000;
+}	
+
+ 
+
+footer p {
+    
+    color: #000000;
+}
+
+#pDiseño {
+    font-size: 15px;
+    color: #000000;
+}
+
+#inputBuscar::placeholder
+{
+    color: #ffffffc3;
+}
+#headerRow {
+    background-color: #421a1a; 
+    color: #ffffff;
+    text-align: center;
+    padding: 2px 0; 
+    font-size: 18px; 
+    font-weight: bold; 
+    letter-spacing: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+#headerRow span {
+    display: inline-block;
+    white-space: nowrap;
+    animation: moveText 10s linear infinite; 
+    text-shadow: 2px 2px 4px #421a1a;
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+#formularioContacto{
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto 100px;
+    background-color: #421a1a;
+    padding: 20px; 
+    max-width: 600px; 
+    width: 100%; 
+    border-radius: 40px;
+}
+
+#formularioContacto button{
+    background-color: #ffffff;
+    border-radius: 50px;
+    border-color: #ffffff;
+}
