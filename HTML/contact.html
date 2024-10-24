@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../CSS/styles2.css">
     <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../js/page.js"></script>
 
 </head>
 <body>
@@ -44,7 +45,7 @@
     </header>
     <hr>
     <div id="formularioContacto">
-        <form action="/enviar_formulario" method="post">
+        <form>
             <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre" required><br><br>
     
@@ -67,7 +68,7 @@
                 Deseo recibir el newsletter
             </label><br><br>
     
-            <button type="submit">Enviar</button>
+            <input type="submit" id="envioForm" onclick="nomAp()" value="Enviar">
         </form>
     </div>
     <hr>
