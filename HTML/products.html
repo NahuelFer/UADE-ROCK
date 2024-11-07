@@ -39,49 +39,66 @@
 
     <main>
         <div class="flex-container">
-            <div class="image-item">
-                <img src="../resources/STRADELLA_MV141444_07.webp" alt="Violin">
-                <p>Conjunto deportivo gris femenino, ideal para entrenar con comodidad y estilo.</p>
-            </div>
-            <div class="image-item">
+            <div class="card producto">
                 <img src="../resources/LEONARD_LE362WH_03-transformed.webp" alt="Guitarra">
-                <p>Ropa deportiva y urbana unisex, combinando comodidad y estilo para cualquier ocasión.</p>
+                <p>Guitarra Eléctrica Stratocaster.</p>
             </div>
-            <div class="image-item">
-                <img src="../resources/STRADELLA_MV141444_07.webp" alt="Guitarra">
+            <div class="card producto">
+                <img src="../resources/STRADELLA_MV141444_07.webp" alt="Violin">
                 <p>Guitarra Eléctrica Stratocaster</p>
             </div>
-            <div class="image-item">
+            <div class="card producto">
+                <img src="../resources/LEONARD_LE362WH_03-transformed.webp" alt="Guitarra">
+                <p>Guitarra Eléctrica Stratocaster</p>
+            </div>
+            <div class="card producto">
                 <img src="../resources/LEONARD_LE362WH_03.webp" alt="Amplificador">
                 <p> Amplificador Para Bajo Eléctrico </p>
             </div>
-
-            <div class="image-item">
+        </div>
+        <div class="flex-container">
+            <div class="card producto">
                 <img src="../resources/LEONARD_LE362WH_03.webp" alt="">
-                <p>Conjunto deportivo masculino ajustado, diseñado para ofrecer rendimiento y un estilo deportivo.</p>
+                <p>Amplificador Para Bajo Eléctrico.</p>
             </div>
         </div>
     </main>
 
     <script>
         $(document).ready(function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var searchQuery = urlParams.get('search');
+
+            if (searchQuery) {
+                searchQuery = searchQuery.toLowerCase().trim();
+                $('.card').each(function() {
+                    var altText = $(this).find('img').attr('alt').toLowerCase().trim();
+
+                    if (altText.includes(searchQuery)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            }
+
             $('#inputBuscar').on('keypress', function(event) {
-                if (event.which === 13) { 
-                    event.preventDefault(); 
-
-                    var input = $(this).val().toLowerCase().trim(); 
-
-                    $('.image-item').each(function() {
-                        var altText = $(this).find('img').attr('alt').toLowerCase().trim();
-
-                        if (altText === input) {
-                            $(this).show();
-                        } else {
-                            $(this).hide();
-                        }
-                    });
+                if (event.which === 13) {
+                    event.preventDefault();
+                    var input = $(this).val().toLowerCase().trim();
+                    window.location.href = 'products.html?search=' + encodeURIComponent(input); 
                 }
             });
+
+            $(".producto img").hover(
+                function() {
+                    $(this).css("transform", "scale(1.2)");
+                    $(this).css("transition", "transform 0.3s ease-in-out");
+                },
+                function() {
+                    $(this).css("transform", "scale(1)");
+                }
+            );
         });
     </script>
 
