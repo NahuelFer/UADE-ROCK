@@ -46,25 +46,24 @@ image {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
+    flex-wrap: wrap; 
     gap: 20px; 
 }
 
-.image-item {
+.card {
     border-radius: 8%;
     background-color: #421a1a;
     text-align: center;
     max-width: 200px;
 }
 
-.image-item img {
+.card img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-.image-item p {
+.card p {
     margin-top: 10px;
     font-size: 18px;
     color: #fff;
