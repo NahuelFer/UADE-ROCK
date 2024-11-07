@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página en Construcción</title>
+    <title>Productos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <link rel="stylesheet" href="../CSS/styles2.css">
     <link rel="stylesheet" href="../CSS/style.css">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
     <header id="header">
- 
         <div id="titulo">
             <img src="../resources/uaderock.png" alt="Logo">
         
             <div class="search-container">
-                <input id="inputBuscar"type="text" placeholder="¿Qué Instrumento Buscas?">
+                <input id="inputBuscar" type="text" placeholder="¿Qué Instrumento Buscas?">
                 <button class="btn buscar"><i class="fas fa-search"></i></button>
             </div>
             <br>
         </div>
-        
 
         <nav>
             <div id="navContainer">
@@ -40,19 +37,53 @@
         </nav>
     </header>
 
-    <div class="flex-container">
-        <div class="image-item">
-            <img src="../resources/ropa1.jpg" alt="Descripcion1">
-            <p>Conjunto deportivo gris femenino, ideal para entrenar con comodidad y estilo.</p>
+    <main>
+        <div class="flex-container">
+            <div class="image-item">
+                <img src="../resources/STRADELLA_MV141444_07.webp" alt="Violin">
+                <p>Conjunto deportivo gris femenino, ideal para entrenar con comodidad y estilo.</p>
+            </div>
+            <div class="image-item">
+                <img src="../resources/LEONARD_LE362WH_03-transformed.webp" alt="Guitarra">
+                <p>Ropa deportiva y urbana unisex, combinando comodidad y estilo para cualquier ocasión.</p>
+            </div>
+            <div class="image-item">
+                <img src="../resources/STRADELLA_MV141444_07.webp" alt="Guitarra">
+                <p>Guitarra Eléctrica Stratocaster</p>
+            </div>
+            <div class="image-item">
+                <img src="../resources/LEONARD_LE362WH_03.webp" alt="Amplificador">
+                <p> Amplificador Para Bajo Eléctrico </p>
+            </div>
+
+            <div class="image-item">
+                <img src="../resources/LEONARD_LE362WH_03.webp" alt="">
+                <p>Conjunto deportivo masculino ajustado, diseñado para ofrecer rendimiento y un estilo deportivo.</p>
+            </div>
         </div>
-        <div class="image-item">
-            <img src="../resources/ropa2.jpg" alt="Descripcion2">
-            <p>Ropa deportiva y urbana unisex, combinando comodidad y estilo para cualquier ocasión.</p>
-        </div>
-        <div class="image-item">
-            <img src="../resources/ropa3.png" alt="Descripcion3">
-            <p>Conjunto deportivo masculino ajustado, diseñado para ofrecer rendimiento y un estilo deportivo.</p>
-        </div>
-    </div>
+    </main>
+
+    <script>
+        $(document).ready(function() {
+            $('#inputBuscar').on('keypress', function(event) {
+                if (event.which === 13) { 
+                    event.preventDefault(); 
+
+                    var input = $(this).val().toLowerCase().trim(); 
+
+                    $('.image-item').each(function() {
+                        var altText = $(this).find('img').attr('alt').toLowerCase().trim();
+
+                        if (altText === input) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
