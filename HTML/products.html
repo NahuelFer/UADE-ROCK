@@ -38,69 +38,48 @@
     </header>
 
     <main>
-        <div class="flex-container">
-            <div class="card producto">
-                <img src="../resources/LEONARD_LE362WH_03-transformed.webp" alt="Guitarra">
-                <p>Guitarra Eléctrica Stratocaster.</p>
-            </div>
-            <div class="card producto">
-                <img src="../resources/STRADELLA_MV141444_07.webp" alt="Violin">
-                <p>Guitarra Eléctrica Stratocaster</p>
-            </div>
-            <div class="card producto">
-                <img src="../resources/LEONARD_LE362WH_03-transformed.webp" alt="Guitarra">
-                <p>Guitarra Eléctrica Stratocaster</p>
-            </div>
-            <div class="card producto">
-                <img src="../resources/LEONARD_LE362WH_03.webp" alt="Amplificador">
-                <p> Amplificador Para Bajo Eléctrico </p>
-            </div>
-        </div>
-        <div class="flex-container">
-            <div class="card producto">
-                <img src="../resources/LEONARD_LE362WH_03.webp" alt="">
-                <p>Amplificador Para Bajo Eléctrico.</p>
-            </div>
-        </div>
+
+        <aside class="filter">
+            <h2>Filtrar por categoría</h2>
+            <label>
+                <input type="checkbox" class="category-filter" value="guitarras" checked>
+                Guitarras
+            </label>
+            <label>
+                <input type="checkbox" class="category-filter" value="teclados" checked>
+                Teclados
+            </label>
+            <label>
+                <input type="checkbox" class="category-filter" value="bajos" checked>
+                Bajos
+            </label>
+            <label>
+                <input type="checkbox" class="category-filter" value="amplis" checked>
+                Amplificadores
+            </label>
+            <label>
+                <input type="checkbox" class="category-filter" value="accesorios" checked>
+                Accesorios
+            </label>
+        </aside>
+
+        <section class="products flex-container">
+            <div class="card guitarras"><img src="../resources/LEONARD_LE362WH_03-transformed.webp" alt="">Guitarra 1</div>
+            <div class="card guitarras"><img src="" alt="">Guitarra 2</div>
+            <div class="card guitarras"><img src="" alt="">Guitarra 3</div>
+            <div class="card guitarras"><img src="" alt="">Guitarra 4</div>
+            <div class="card teclados"><img src="" alt="">Teclado 1</div>
+            <div class="card teclados"><img src="" alt="">Teclado 2</div>
+            <div class="card bajos"><img src="" alt="">Bajo 1</div>
+            <div class="card bajos"><img src="" alt="">Bajo 2</div>
+            <div class="card amplis"><img src="" alt="">Amplificador 1</div>
+            <div class="card amplis"><img src="" alt="">Amplificador 2</div>
+            <div class="card accesorios"><img src="" alt="">Pua</div>
+            <div class="card accesorios"><img src="" alt="">Correa</div>
+        </section>
     </main>
 
-    <script>
-        $(document).ready(function() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var searchQuery = urlParams.get('search');
-
-            if (searchQuery) {
-                searchQuery = searchQuery.toLowerCase().trim();
-                $('.card').each(function() {
-                    var altText = $(this).find('img').attr('alt').toLowerCase().trim();
-
-                    if (altText.includes(searchQuery)) {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
-                    }
-                });
-            }
-
-            $('#inputBuscar').on('keypress', function(event) {
-                if (event.which === 13) {
-                    event.preventDefault();
-                    var input = $(this).val().toLowerCase().trim();
-                    window.location.href = 'products.html?search=' + encodeURIComponent(input); 
-                }
-            });
-
-            $(".producto img").hover(
-                function() {
-                    $(this).css("transform", "scale(1.2)");
-                    $(this).css("transition", "transform 0.3s ease-in-out");
-                },
-                function() {
-                    $(this).css("transform", "scale(1)");
-                }
-            );
-        });
-    </script>
+    <script src="../js/page.js"></script>
 
 </body>
 </html>
