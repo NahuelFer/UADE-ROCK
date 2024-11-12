@@ -44,34 +44,45 @@ image {
 
 .flex-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; 
+    align-items: flex-start;
     flex-wrap: wrap; 
-    gap: 20px; 
+    gap: 20px;
+    margin-top: 20px; 
+    width: 100%;
 }
 
 .card {
-
     background-color: white;
     border: 2px solid #772020;
     border-radius: 8px;
     padding: 20px;
-    width: calc(25% - 80px);
+    width: calc(25% - 20px); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: black;
     font-size: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 20px; 
+    overflow: hidden; 
+    transition: transform 0.3s ease; 
 }
 
 .card img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    transition: transform 0.3s ease; 
 }
 
-.card p {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #fff;
+.card:hover img {
+    transform: scale(1.2); 
+    transform-origin: center center;
 }
+
+.card.guitarras, .card.teclados, .card.bajos, .card.amplis, .card.accesorios {
+    display: block; 
+    opacity: 1; 
+}
+.filter-hidden {
+    display: none;
+}
+
