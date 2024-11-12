@@ -20,7 +20,7 @@
         
             <div class="search-container">
                 <input id="inputBuscar"type="text" placeholder="¿Qué Instrumento Buscas?">
-                <button class="btn buscar"><i class="fas fa-search"></i></button>
+                <button class="btn buscar" id="searchButton"><i class="fas fa-search"></i></button>
             </div>
             <br>
         </div>
@@ -77,5 +77,25 @@
             <a href="https://www.facebook.com/"target=_blank">Facebook</a>
             <p>Todos los Derechos reservados ©</p>
         </footer>
+        <script>
+            document.getElementById('searchButton').addEventListener('click', function() {
+                var searchQuery = document.getElementById('inputBuscar').value.trim();
+                if (searchQuery) {
+                    window.location.href = 'products.html?search=' + encodeURIComponent(searchQuery);
+                }
+            });
+    
+            document.getElementById('inputBuscar').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault(); 
+                    var searchQuery = document.getElementById('inputBuscar').value.trim();
+                    if (searchQuery) {
+                        window.location.href = 'products.html?search=' + encodeURIComponent(searchQuery);
+                    }
+                }
+            });
+        </script>
+        
 </body>
+
 </html>
