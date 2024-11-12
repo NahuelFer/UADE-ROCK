@@ -174,7 +174,7 @@ footer a {
     margin: 20px;
 }	
 footer a:hover {
-    color: #ff0000;
+    color: #7e1627;
 }	
 
  
@@ -193,53 +193,165 @@ footer p {
 {
     color: #ffffffc3;
 }
-#headerRow {
-    background-color: #421a1a; 
-    color: #ffffff;
+/* Contenedor del formulario */
+
+/* Caja de texto de motivo (más minimalista) */
+#formularioContacto textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 6px; /* Bordes suaves */
+    font-size: 15px;
+    color: #333;
+    background-color: #f5f5f5; /* Fondo neutral */
+    outline: none;
+    transition: border-color 0.3s ease; /* Transición suave */
+}
+
+
+#formularioContacto {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 40px 30px;
+    max-width: 400px;
+    margin: 100px auto;
+    border-radius: 12px; /* Bordes más suaves */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Sombra más definida */
     text-align: center;
-    padding: 2px 0; 
-    font-size: 18px; 
-    font-weight: bold; 
-    letter-spacing: 2px;
-    overflow: hidden;
-    position: relative;
+    font-family: 'Arial', sans-serif;
 }
 
-#headerRow span {
-    display: inline-block;
-    white-space: nowrap;
-    animation: moveText 10s linear infinite; 
-    text-shadow: 2px 2px 4px #421a1a;
+/* Logo o encabezado */
+#formularioContacto img {
+    max-width: 80px; /* Tamaño del logo */
+    margin-bottom: 20px;
 }
 
-@keyframes moveText {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%); 
-    }
+/* Título del formulario */
+#formularioContacto h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 20px;
 }
 
-#formularioContacto{
+/* Etiquetas */
+#formularioContacto label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    text-align: left;
+    width: 100%;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Campos de entrada */
+#formularioContacto input[type="text"],
+#formularioContacto input[type="password"],
+#formularioContacto input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bordes más redondeados */
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9; /* Fondo suave */
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Campo de entrada mejorado */
+#formularioContacto input[type="text"],
+#formularioContacto input[type="password"],
+#formularioContacto input[type="email"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Bordes más redondeados */
+    font-size: 15px;
+    color: #333;
+    background-color: #f5f5f5; /* Fondo suave */
+    outline: none;
+    transition: all 0.3s ease; /* Transición suave */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+#formularioContacto input[type="text"]:focus,
+#formularioContacto input[type="password"]:focus,
+#formularioContacto input[type="email"]:focus
+
+/* Botón de envío */
+#formularioContacto button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4b1f1f; /* Color sólido y oscuro */
     color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 100px auto 100px;
-    background-color: #421a1a;
-    padding: 20px; 
-    max-width: 600px; 
-    width: 100%; 
-    border-radius: 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px; /* Bordes más suaves */
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease; /* Transición suave */
 }
 
-#formularioContacto button{
-    background-color: #ffffff;
-    border-radius: 50px;
-    border-color: #ffffff;
+#formularioContacto textarea:focus {
+    border-color: #4b1f1f; /* Color de borde en foco */
 }
+
+/* Botón de envío (diseño minimalista) */
+#formularioContacto button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4b1f1f; /* Color sólido y oscuro */
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px; /* Bordes más suaves */
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#formularioContacto button:hover {
+    background-color: #3a1818; /* Sombra más suave al pasar el mouse */
+}
+
+/* Placeholder styling */
+#formularioContacto input::placeholder,
+#formularioContacto textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Texto de pie de página en el formulario */
+#formularioContacto .footer-text {
+    font-size: 12px;
+    color: #888888;
+    margin-top: 15px;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#formularioContacto {
+    animation: fadeIn 0.6s ease-in-out; /* Animación al cargar */
+}
+
 
 .filter {
     background-color: #fff;
