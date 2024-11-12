@@ -14,14 +14,12 @@
     <header id="header">
         <div id="titulo">
             <img src="../resources/uaderock.png" alt="Logo">
-        
             <div class="search-container">
                 <input id="inputBuscar" type="text" placeholder="¿Qué Instrumento Buscas?">
-                <button class="btn buscar"><i class="fas fa-search"></i></button>
+                <button class="btn buscar" id="searchButton"><i class="fas fa-search"></i></button>
             </div>
             <br>
         </div>
-
         <nav>
             <div id="navContainer">
                 <div id="navId">
@@ -37,47 +35,48 @@
         </nav>
     </header>
 
-    <main>
-
+    <main style="display: flex;">
         <aside class="filter">
-            <h2>Filtrar por categoría</h2>
-            <label>
-                <input type="checkbox" class="category-filter" value="guitarras" checked>
-                Guitarras
-            </label>
-            <label>
-                <input type="checkbox" class="category-filter" value="teclados" checked>
-                Teclados
-            </label>
-            <label>
-                <input type="checkbox" class="category-filter" value="bajos" checked>
-                Bajos
-            </label>
-            <label>
-                <input type="checkbox" class="category-filter" value="amplis" checked>
-                Amplificadores
-            </label>
-            <label>
-                <input type="checkbox" class="category-filter" value="accesorios" checked>
-                Accesorios
-            </label>
+            <h2>Filtrar</h2>
+            <div class="filter-options">
+                <label>
+                    <input type="checkbox" class="category-filter" value="guitarras" checked>
+                    Guitarras
+                </label>
+                <label>
+                    <input type="checkbox" class="category-filter" value="teclados" checked>
+                    Teclados
+                </label>
+                <label>
+                    <input type="checkbox" class="category-filter" value="bajos" checked>
+                    Bajos
+                </label>
+                <label>
+                    <input type="checkbox" class="category-filter" value="amplis" checked>
+                    Amplificadores
+                </label>
+                <label>
+                    <input type="checkbox" class="category-filter" value="accesorios" checked>
+                    Accesorios
+                </label>
+            </div>
         </aside>
-
+        
         <section class="products flex-container">
             <div class="card guitarras"><img src="../resources/guitarra 1.webp" alt="guitarra">Guitarra 1</div>
             <div class="card guitarras"><img src="../resources/guitarra 2.webp" alt="guitarra">Guitarra 2</div>
             <div class="card guitarras"><img src="../resources/guitarra 3.webp" alt="guitarra">Guitarra 3</div>
             <div class="card guitarras"><img src="../resources/guitarra 4.webp" alt="guitarra">Guitarra 4</div>
-            <div class="card teclados"><img src="../resources/criolla 1.webp" alt="guitarra">Guitarra criolla</div>
-            <div class="card teclados"><img src="../resources/criolla 2.webp" alt="guitarra">Guitarra criolla</div>
-            <div class="card bajos"><img src="../resources/ampli 1.webp" alt="amplificador">Amplificador guitarra</div>
-            <div class="card bajos"><img src="../resources/ampli 2.webp" alt="amplificador">Amplificador guitarra</div>
+            <div class="card guitarras"><img src="../resources/criolla 1.webp" alt="guitarra">Guitarra criolla</div>
+            <div class="card guitarras"><img src="../resources/criolla 2.webp" alt="guitarra">Guitarra criolla</div>
+            <div class="card amplis "><img src="../resources/ampli 1.webp" alt="amplificador">Amplificador guitarra</div>
+            <div class="card amplis"><img src="../resources/ampli 2.webp" alt="amplificador">Amplificador guitarra</div>
             <div class="card amplis"><img src="../resources/ampli 3.webp" alt="amplificador">Amplificador guitarra</div>
             <div class="card amplis"><img src="../resources/ampli 4.webp" alt="amplificador">Amplificador guitarra</div>
             <div class="card accesorios"><img src="../resources/pua.webp" alt="pua">Pua</div>
             <div class="card accesorios"><img src="../resources/correa.webp" alt="correa">Correa</div>
-            <div class="card accesorios"><img src="../resources/bajo 1.webp" alt="bajo">Bajo Yamaha</div>
-            <div class="card accesorios"><img src="../resources/bajo 2.webp" alt="bajo">Bajo Epiphone</div>
+            <div class="card bajos"><img src="../resources/bajo 1.webp" alt="bajo">Bajo Yamaha</div>
+            <div class="card bajos"><img src="../resources/bajo 2.webp" alt="bajo">Bajo Epiphone</div>
         </section>
     </main>
 
