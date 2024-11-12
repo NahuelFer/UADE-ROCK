@@ -5,36 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <link rel="stylesheet" href="../CSS/styles2.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <script src="../js/page.js"></script>
-
 </head>
 <body>
 
     <header id="header">
- 
         <div id="titulo">
             <img src="../resources/uaderock.png" alt="Logo">
-        
             <div class="search-container">
-                <input id="inputBuscar"type="text" placeholder="¿Qué Instrumento Buscas?">
+                <input id="inputBuscar" type="text" placeholder="¿Qué Instrumento Buscas?">
                 <button class="btn buscar" id="searchButton"><i class="fas fa-search"></i></button>
             </div>
             <br>
         </div>
-        
 
         <nav>
             <div id="navContainer">
                 <div id="navId">
-                    <div id="navId">
-                        <a class="nav1" href="../index.html">Inicio</a>
-                        <a class="nav1" href="products.html">Productos</a>
-                        <a class="nav1" href="../index.html#parrafo1">Nosotros</a>
-                        <a class="nav1" href="contact.html">Contacto</a>
-                    </div>
+                    <a class="nav1" href="../index.html">Inicio</a>
+                    <a class="nav1" href="products.html">Productos</a>
+                    <a class="nav1" href="../index.html#parrafo1">Nosotros</a>
+                    <a class="nav1" href="contact.html">Contacto</a>
                 </div>
                 <div class="nav-icons">
                     <a href="login.html" class="nav-icon"><i class="fas fa-user"></i></a>
@@ -44,58 +37,41 @@
     </header>
     <hr>
     <div id="formularioContacto">
-        <form>
+        
+        <form onsubmit="return nomAp(event)">
             <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre" required><br><br>
-    
+
             <label for="apellido">Apellido:</label><br>
             <input type="text" id="apellido" name="apellido" required><br><br>
-    
+
             <label for="email">Correo Electrónico:</label><br>
             <input type="email" id="email" name="email" required><br><br>
-    
+
             <label for="motivo">Motivo de Consulta:</label><br>
-            <textarea id="motivo" name="motivo" rows="4" cols="30" required></textarea><br><br>
-    
+            <textarea id="motivo" name="motivo" rows="4" required></textarea><br><br>
+
             <label>
                 <input type="checkbox" id="terminos" name="terminos" required> 
                 Acepto los términos y condiciones
             </label><br><br>
-    
+
             <label>
                 <input type="checkbox" id="newsletter" name="newsletter">
                 Deseo recibir el newsletter
             </label><br><br>
-    
-            <input type="submit" id="envioForm" onclick="nomAp()" value="Enviar">
+
+            <button type="submit" id="envioForm">Enviar</button>
         </form>
     </div>
     <hr>
-           <footer id="footer1">
-            <a href="https://www.instagram.com/"target=_blank">Instagram</a>
-            <a href="https://www.whatsapp.com/"target=_blank">WhatsApp</a>
-            <a href="https://www.facebook.com/"target=_blank">Facebook</a>
-            <p>Todos los Derechos reservados ©</p>
-        </footer>
-        <script>
-            document.getElementById('searchButton').addEventListener('click', function() {
-                var searchQuery = document.getElementById('inputBuscar').value.trim();
-                if (searchQuery) {
-                    window.location.href = 'products.html?search=' + encodeURIComponent(searchQuery);
-                }
-            });
-    
-            document.getElementById('inputBuscar').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    e.preventDefault(); 
-                    var searchQuery = document.getElementById('inputBuscar').value.trim();
-                    if (searchQuery) {
-                        window.location.href = 'products.html?search=' + encodeURIComponent(searchQuery);
-                    }
-                }
-            });
-        </script>
-        
-</body>
+    <footer id="footer1">
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        <a href="https://www.whatsapp.com/" target="_blank">WhatsApp</a>
+        <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+        <p>Todos los Derechos reservados ©</p>
+    </footer>
 
+
+</body>
 </html>
