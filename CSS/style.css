@@ -19,6 +19,7 @@ h1 {
     background-color: #fffff0;
     position: sticky;
     top: 0;
+    z-index: 10;  
     text-align: center;
 }
 
@@ -240,18 +241,62 @@ footer p {
     border-color: #ffffff;
 }
 
-/*SECCION DE FILTRO EN PRODUCTOS*/
-
 .filter {
-    width: 200px;
-    padding: 10px;
-    border-right: 1px solid #ddd;
-    color: #000000;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    position: relative;
+margin-top: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    max-width: 100%;
+    max-height: 220px; 
 }
 
-.products {
+.filter h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #421a1a;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.filter-options label {
     display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+    color: #421a1a;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    min-height: 24px; 
+}
+
+.filter-options label:last-child {
+    border-bottom: none;
+}
+
+.filter input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #421a1a;
+    transform: scale(1.1);
+}
+
+.filter-options label:hover {
+    background-color: #f7f7f7;
+    color: #421a1a;
+}
+
+.filter {
+    border: 1px solid #d4c1c1;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    display: flex;
+    align-items: flex-start;
 }
