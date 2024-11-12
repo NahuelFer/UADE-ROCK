@@ -239,3 +239,19 @@ footer p {
     border-radius: 50px;
     border-color: #ffffff;
 }
+
+/*SECCION DE FILTRO EN PRODUCTOS*/
+
+.filter {
+    width: 200px;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    color: #000000;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+}
