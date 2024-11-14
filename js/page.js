@@ -1,12 +1,38 @@
+function nomAp(event) {
+    event.preventDefault(); // Previene el envío del formulario
 
+    var nombre = document.getElementById("nombre").value.trim();
+    var apellido = document.getElementById("apellido").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var motivo = document.getElementById("motivo").value.trim();
+    var terminos = document.getElementById("terminos").checked;
 
-function nomAp(){
-    var nombre, apellido;
-    nombre = document.getElementById("nombre").value;
-    apellido = document.getElementById("apellido").value;
+    if (nombre === "" || apellido === "" || email === "" || motivo === "" || !terminos) {
+        alert("Por favor, completa todos los campos obligatorios y acepta los términos.");
+        return false; 
+    }
 
-    alert("Gracias, " + nombre +" " + apellido + " , tu consulta fue enviada con exito.");
+    alert("Gracias, " + nombre + " " + apellido + ", tu consulta fue enviada con éxito.");
+    window.location.href = '../index.html'; 
 }
+
+document.getElementById('searchButton').addEventListener('click', function() {
+    var searchQuery = document.getElementById('inputBuscar').value.trim();
+    if (searchQuery) {
+        window.location.href = 'products.html?search=' + encodeURIComponent(searchQuery);
+    }
+});
+
+document.getElementById('inputBuscar').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault(); 
+        var searchQuery = document.getElementById('inputBuscar').value.trim();
+        if (searchQuery) {
+            window.location.href = 'products.html?search=' + encodeURIComponent(searchQuery);
+        }
+    }
+});
+
 
 $(document).ready(function() {
     var urlParams = new URLSearchParams(window.location.search);

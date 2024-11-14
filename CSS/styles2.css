@@ -1,68 +1,77 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+
+/*  */
+.container {
+    text-align: center;
+}
+.loader {
+    border: 16px solid #c0341e;
+    border-top: 16px solid rgb(158, 29, 6);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+    
+    position: sticky; 
+    top: 50%; 
+    left: 47%; 
+    transform: translate(-50%, -50%); 
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+image {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    
 }
 
-.login-container {
-    background-color: #fff;
+.flex-container {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    gap: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+.card {
+    background-color: white;
+    border: 2px solid #772020;
+    border-radius: 8px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: calc(25% - 20px); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 20px; 
+    overflow: hidden; 
+    transition: transform 0.3s ease; 
 }
 
-.logo {
-    width: 100px; 
-    margin-bottom: 20px;
-}
-
-h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.input-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-    font-weight: bold;
-}
-
-.input-group input {
+.card img {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
+    height: auto;
+    transition: transform 0.3s ease; 
 }
 
-.btn-login {
-    background-color: #571e1e;
-    color: #fff;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.card:hover img {
+    transform: scale(1.2); 
+    transform-origin: center center;
 }
 
-.btn-login:hover {
-    background-color: #550c18;
+.card.guitarras, .card.teclados, .card.bajos, .card.amplis, .card.accesorios {
+    display: block; 
+    opacity: 1; 
+}
+.filter-hidden {
+    display: none;
 }
 
-input:invalid {
-    border-color: red;
-}

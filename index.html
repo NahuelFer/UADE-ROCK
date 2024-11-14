@@ -1,79 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
 
-        <header id="header">
-            <div id="headerRow">
-                <span>¡ALUMNOS DE UADE! OBTENÉ UN 10% DE DESCUENTO EN TODOS NUESTROS PRODUCTOS Y SERVICIOS</span>
-            </div>
-            
-            <div id="titulo">
-                <a href="index.html" style="display: inline-block;">
-                    <img src="resources/uaderock.png" alt="Logo" style="vertical-align: middle;">
-                </a>
-                <div class="search-container">
-                    <input id="inputBuscar" type="text" placeholder="¿Qué Instrumento Buscas?">
-                    <button class="btn buscar" id="searchButton"><i class="fas fa-search"></i></button>
+            <header id="header">
+                <div id="headerRow">
+                    <span>¡ALUMNOS DE UADE! OBTENÉ UN 10% DE DESCUENTO EN TODOS NUESTROS PRODUCTOS Y SERVICIOS</span>
                 </div>
-                <br>
-            </div>
-        <nav>
-            <div id="navContainer">
-                <div id="navId">
-                    <a class="nav1" href="index.html">Inicio</a>
-                    <a class="nav1" href="HTML/products.html">Productos</a>
-                    <a class="nav1" href="#parrafo1">Nosotros</a>
-                    <a class="nav1" href="HTML/contact.html">Contacto</a>
+                
+                <div id="titulo">
+                    <a href="index.html" style="display: inline-block;">
+                        <img src="resources/uaderock.png" alt="Logo" style="vertical-align: middle;">
+                    </a>
+                    <div class="search-container">
+                        <input id="inputBuscar" type="text" placeholder="¿Qué Instrumento Buscas?">
+                        <button class="btn buscar" id="searchButton"><i class="fas fa-search"></i></button>
+                    </div>
+                    <br>
                 </div>
-                <div class="nav-icons">
-                    <a href="HTML/login.html" class="nav-icon"><i class="fas fa-user"></i></a>
+            <nav>
+                <div id="navContainer">
+                    <div id="navId">
+                        <a class="nav1" href="index.html">Inicio</a>
+                        <a class="nav1" href="HTML/products.html">Productos</a>
+                        <a class="nav1" href="#parrafo2">Nosotros</a>
+                        <a class="nav1" href="HTML/contact.html">Contacto</a>
+                    </div>
+                    <div class="nav-icons">
+                        <a href="HTML/login.html" class="nav-icon"><i class="fas fa-user"></i></a>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <div id="image">
-        <img src="resources/local.png" alt="Imagen principal">
-    </div>
-    
-    <hr>
-    <div id="parrafo1">
-        <p>¡Bienvenidos a UADE Rock! Somos la tienda de instrumentos musicales creada especialmente para la comunidad universitaria. Sabemos que el ritmo de la vida estudiantil también lleva música...</p>
-    </div>
-    <hr>
-    
-    <footer id="footer1">
-        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-        <a href="https://www.whatsapp.com/" target="_blank">WhatsApp</a>
-        <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-        <p>Todos los Derechos reservados ©</p>
-    </footer>
+        <div id="image">
+            <img src="resources/local.png" alt="Imagen principal">
+        </div>
+        
+        <hr>
+        <div id="parrafo1">
+            <p>¡Bienvenidos a UADE Rock! Somos la tienda de instrumentos musicales creada especialmente para la comunidad universitaria. Sabemos que el ritmo de la vida estudiantil también lleva música...</p>
+        </div>
+        <div id="parrafo2">
+            <p>En UADE Rock, creemos que la música es una forma de expresión y conexión única. Nuestro equipo está compuesto por músicos y apasionados de la música que entienden lo importante que es contar con el instrumento adecuado. Ofrecemos asesoramiento personalizado para ayudarte a encontrar exactamente lo que necesitas, sin importar si eres un principiante o un músico experimentado. Además, colaboramos con eventos y actividades universitarias, creando un espacio donde los estudiantes puedan compartir su pasión y desarrollar su talento. ¡Únete a nuestra comunidad y descubre todo lo que UADE Rock tiene para ofrecer!</p>
+        </div>
+        
+        <hr>
 
-    <script>
-        document.getElementById('searchButton').addEventListener('click', function() {
-            var searchQuery = document.getElementById('inputBuscar').value.trim();
-            if (searchQuery) {
-                window.location.href = 'HTML/products.html?search=' + encodeURIComponent(searchQuery);
-            }
-        });
+        <footer id="footer1">
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a href="https://www.whatsapp.com/" target="_blank">WhatsApp</a>
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+            <p>Todos los Derechos reservados ©</p>
+        </footer>
 
-        document.getElementById('inputBuscar').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault(); 
+        <script>
+            document.getElementById('searchButton').addEventListener('click', function() {
                 var searchQuery = document.getElementById('inputBuscar').value.trim();
                 if (searchQuery) {
                     window.location.href = 'HTML/products.html?search=' + encodeURIComponent(searchQuery);
                 }
-            }
-        });
-    </script>
-    
-</body>
-</html>
+            });
+
+            document.getElementById('inputBuscar').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault(); 
+                    var searchQuery = document.getElementById('inputBuscar').value.trim();
+                    if (searchQuery) {
+                        window.location.href = 'HTML/products.html?search=' + encodeURIComponent(searchQuery);
+                    }
+                }
+            });
+        </script>
+        
+    </body>
+    </html>
